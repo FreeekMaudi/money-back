@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<groups>
+  <group>
+    <groupId>1</groupId>
+    <persons>2,3,4</persons>
+  </group>
+  <group>
+    <groupId>2</groupId>
+    <persons>1</persons>
+  </group>
+  <group>
+    <groupId>3</groupId>
+    <persons>1</persons>
+  </group>
+  <group>
+    <groupId>4</groupId>
+    <persons>1</persons>
+  </group>
+</groups>

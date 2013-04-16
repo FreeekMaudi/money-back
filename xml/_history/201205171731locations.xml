@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<locations>
+  <location>
+    <locationId>1</locationId>
+    <name>Tivoli</name>
+    <url>http://www.tivoli.nl/</url>
+    <image>tivoli.png</image>
+    <adress street="Oudegracht" number="245" city="Utrecht"/>
+    <P_adress name="Springweg" street="" number=""/>
+  </location>
+  <location>
+    <locationId>2</locationId>
+    <name>Paradiso</name>
+    <url>http://www.paradiso.nl/</url>
+    <image>paradiso.png</image>
+    <adress street="Weteringschans" number="6-8" city="Amsterdam"/>
+    <P_adress name="Byzantium" street="Stadhouderskade" number=""/>
+  </location>
+  <location>
+    <locationId>3</locationId>
+    <name>Melkweg</name>
+    <url>http://www.melkweg.nl/</url>
+    <image>melkweg.png</image>
+    <adress street="Lijnbaansgracht" number="234a" city="Amsterdam"/>
+    <P_adress name="Byzantium" street="Stadhouderskade" number=""/>
+  </location>
+  <location>
+    <locationId>4</locationId>
+    <name>Heineken Music Hall</name>
+    <url>http://www.heineken-music-hall.nl/</url>
+    <image>HMH.png</image>
+    <adress street="ArenA Boulevard" number="590" city="Amsterdam"/>
+    <P_adress name="" street="" number=""/>
+  </location>
+  <location>
+    <locationId>5</locationId>
+    <name>013</name>
+    <url>http://www.013.nl/</url>
+    <image>013.png</image>
+    <adress street="Veemarktstraat" number="44" city="Tilburg"/>
+    <P_adress name="Tivolli" street="" number=""/>
+  </location>
+  <location>
+    <locationId>6</locationId>
+    <name>Gashouder</name>
+    <url>http://www.westergasfabriek.nl/</url>
+    <image>gashouder.png</image>
+    <adress street="Pazzanistraat" number="41" city="Amsterdam"/>
+    <P_adress name="Westerpark" street="Van Bleiswijkstraat" number="8"/>
+  </location>
+  <location>
+    <locationId>7</locationId>
+    <name>Haarlemmermeer</name>
+    <url></url>
+    <image>haarlemmermeer.jpg</image>
+    <adress street="" number="" city=""/>
+    <P_adress name="" street="" number=""/>
+  </location>
+  <location>
+    <locationId>8</locationId>
+    <name>Winkel van Sinkel</name>
+    <url>www.nachtwinkel.nl</url>
+    <image>nachtwinkel.jpg</image>
+    <adress street="" number="" city="Utrecht"/>
+    <P_adress name="" street="" number=""/>
+  </location>
+  <location>
+    <locationId>9</locationId>
+    <name>Ziggo Dome</name>
+    <url>http://www.ziggodome.nl</url>
+    <image>ziggo_dome.jpg</image>
+    <adress street="Arena boulevard" number="" city="Amsterdam"/>
+    <P_adress name="" street="" number=""/>
+  </location>
+  <location>
+    <locationId>10</locationId>
+    <name>Vredenburg</name>
+    <url>www.vredenburg.nl</url>
+    <image>vredenburg.jpg</image>
+    <adress street="" number="" city="Utrecht"/>
+    <P_adress name="" street="" number=""/>
+  </location>
+  <location>
+    <locationId>11</locationId>
+    <name>State Opera House</name>
+    <url>www.opera.cz/en</url>
+    <image>opera_state_house.jpg</image>
+    <adress street="" number="" city="Praag"/>
+    <P_adress name="" street="" number=""/>
+  </location>
+  <location>
+    <locationId>12</locationId>
+    <name>Earl's Court</name>
+    <url>www.eco.co.uk</url>
+    <image>earls-court.jpg</image>
+    <adress street="" number="" city="London"/>
+    <P_adress name="" street="" number=""/>
+  </location>
+</locations>

@@ -1,0 +1,282 @@
+<?xml version="1.0"?>
+<events>
+  <event>
+    <eventId>19</eventId>
+    <name>George Michael</name>
+    <url>www.george-michael.nl</url>
+    <image>george_michael_25live_final.jpg</image>
+    <date>20080824</date>
+    <locationId>12</locationId>
+    <persons>4,1</persons>
+  </event>
+  <event>
+    <eventId>1</eventId>
+    <name>De Dijk</name>
+    <url>http://www.dedijk.nl/</url>
+    <image>de_dijk_brussel.jpg</image>
+    <date>20081114</date>
+    <locationId>1</locationId>
+    <persons>1,2</persons>
+  </event>
+  <event>
+    <eventId>2</eventId>
+    <name>Gotcha!</name>
+    <url>http://www.gotchasite.com/</url>
+    <image>gotcha_logo.png</image>
+    <date>20091211</date>
+    <locationId>1</locationId>
+    <persons>1,2</persons>
+  </event>
+  <event>
+    <eventId>3</eventId>
+    <name>Angie Stone</name>
+    <url>http://www.angiestoneonline.net/</url>
+    <image>angie_stone_unexpected.jpg</image>
+    <date>20100316</date>
+    <locationId>3</locationId>
+    <persons>1,2</persons>
+  </event>
+  <event>
+    <eventId>4</eventId>
+    <name>3FM Awards</name>
+    <url>http://presents.3fm.nl/page/10_3fmawards</url>
+    <image>3fm_awards_2010.jpg</image>
+    <date>20100415</date>
+    <locationId>6</locationId>
+    <persons>1,2</persons>
+  </event>
+  <event>
+    <eventId>5</eventId>
+    <name>Ryan Shaw</name>
+    <url>http://www.thisisryanshaw.com/</url>
+    <image>ryan_shaw.jpg</image>
+    <date>20100530</date>
+    <locationId>2</locationId>
+    <persons>1,2</persons>
+  </event>
+  <event>
+    <eventId>6</eventId>
+    <name>Alain Clark</name>
+    <url>http://www.alainclark.nl/</url>
+    <image>alain_clark_colorblind.jpg</image>
+    <date>20100910</date>
+    <locationId>1</locationId>
+    <persons>1,2</persons>
+  </event>
+  <event>
+    <eventId>7</eventId>
+    <name>Beth Hart</name>
+    <url>http://www.bethhart.com/</url>
+    <image>beth_hart_my_california.png</image>
+    <date>20101121</date>
+    <locationId>5</locationId>
+    <persons>1,2</persons>
+  </event>
+  <event>
+    <eventId>8</eventId>
+    <name>Caro Emerald</name>
+    <url>http://www.caroemerald.com/</url>
+    <image>caro_emerald_deleted_scenes_from_the_cutting_room_floor.jpg</image>
+    <date>20101222</date>
+    <locationId>4</locationId>
+    <persons>1,2</persons>
+  </event>
+  <event>
+    <eventId>10</eventId>
+    <name>Lee Fields &amp; The Expressions</name>
+    <url>http://www.myspace.com/leefields</url>
+    <image>lee_fields_problems.jpg</image>
+    <date>20110218</date>
+    <locationId>1</locationId>
+    <persons>1,2</persons>
+  </event>
+  <event>
+    <eventId>9</eventId>
+    <name>Skunk Anansie</name>
+    <url>http://www.skunkanansie.net/</url>
+    <image>skunk_wonderlustre.jpg</image>
+    <date>20110225</date>
+    <locationId>4</locationId>
+    <persons>1,2</persons>
+  </event>
+  <event>
+    <eventId>11</eventId>
+    <name>Macy Gray</name>
+    <url>http://www.macygray.com/</url>
+    <image>macy_gray_the sell_out.jpg</image>
+    <date>20110720</date>
+    <locationId>1</locationId>
+    <persons>1,2</persons>
+  </event>
+  <event>
+    <eventId>17</eventId>
+    <name>George Michael</name>
+    <url>www.george-michael.nl</url>
+    <image>george_michael_symphonica_2011.jpg</image>
+    <date>20110822</date>
+    <locationId>11</locationId>
+    <persons>4,1</persons>
+  </event>
+  <event>
+    <eventId>18</eventId>
+    <name>Melissa Etheridge</name>
+    <url>www.melissaetheridge.com</url>
+    <image>melissa_etheridge_fearlesslove.jpg</image>
+    <date>20120222</date>
+    <locationId>10</locationId>
+    <persons>4,1</persons>
+  </event>
+  <event>
+    <eventId>15</eventId>
+    <name>Oranje Bal</name>
+    <url>http://www.nachtwinkel.nl/event/2012/04/29/ORANJE+BAL</url>
+    <image>oranjebal.jpg</image>
+    <date>20120429</date>
+    <locationId>8</locationId>
+    <persons>3,1</persons>
+  </event>
+  <event>
+    <eventId>20</eventId>
+    <name>90's Alternative</name>
+    <url>http://www.tivoli.nl/agenda/informatie/atid/455111/datum/za-12-mei-2012/titel/90%5C%26%23039%3BS+ALTERNATIVE</url>
+    <image>90sAlternative.jpg</image>
+    <date>20120512</date>
+    <locationId>1</locationId>
+    <persons>4,1</persons>
+  </event>
+  <event>
+    <eventId>14</eventId>
+    <name>Roxette</name>
+    <url>http://www.roxette.se</url>
+    <image>roxette_travelling.jpg</image>
+    <date>20120629</date>
+    <locationId>4</locationId>
+    <persons>3,1</persons>
+  </event>
+  <event>
+    <eventId>13</eventId>
+    <name>Mysteryland</name>
+    <url>http://www.mysteryland.com/</url>
+    <image>mysteryland-2012.jpg</image>
+    <date>20120825</date>
+    <locationId>7</locationId>
+    <persons>3,1</persons>
+  </event>
+  <event>
+    <eventId>16</eventId>
+    <name>George Michael</name>
+    <url>www.george-michael.nl</url>
+    <image>george_michael_symphonica_2012.jpg</image>
+    <date>20120914</date>
+    <locationId>9</locationId>
+    <persons>4,1</persons>
+  </event>
+  <event>
+    <eventId>12</eventId>
+    <name>Trijntje Oosterhuis</name>
+    <url>http://www.trijntje.nl/</url>
+    <image>WrecksWeAdore.png</image>
+    <date>20121025</date>
+    <locationId>2</locationId>
+    <persons>3,4,1,2</persons>
+  </event>
+  <event>
+    <eventId>21</eventId>
+    <name>Beth Hart</name>
+    <url>http://bethhart.com/</url>
+    <image>beth_hart_bang_bang_boomboom.jpg</image>
+    <date>20121121</date>
+    <locationId>1</locationId>
+    <persons>1,2</persons>
+  </event>
+  <event>
+    <eventId>22</eventId>
+    <name>Seal</name>
+    <url>http://www.seal.com/</url>
+    <image>seal.jpg</image>
+    <date>20121206</date>
+    <locationId>10</locationId>
+    <persons>4,1,2</persons>
+  </event>
+  <event>
+    <eventId>23</eventId>
+    <name>Nacht van Holland</name>
+    <url>http://www.nachtvanholland.com/</url>
+    <image>nacht_van_holland_2012.png</image>
+    <date>20130222</date>
+    <locationId>13</locationId>
+    <persons>3,1</persons>
+  </event>
+  <event>
+    <eventId>24</eventId>
+    <name>Jamie Lidell</name>
+    <url>http://www.jamielidell.com/</url>
+    <image>jamie_lidell_jamie_lidell.jpg</image>
+    <date>20130313</date>
+    <locationId>2</locationId>
+    <persons>3,1,2</persons>
+  </event>
+  <event>
+    <eventId>25</eventId>
+    <name>Ilse de Lange</name>
+    <url>http://www.ilsedelange.com/</url>
+    <image>ilse_de_lange_eye_of_the_hurricane.jpg</image>
+    <date>20130330</date>
+    <locationId>1</locationId>
+    <persons>4,1,2</persons>
+  </event>
+  <event>
+    <eventId>26</eventId>
+    <name>P!nk</name>
+    <url>http://www.pinkspage.com/</url>
+    <image>pink_the_truth_about_love.jpg</image>
+    <date>20130419</date>
+    <locationId>9</locationId>
+    <persons>4,1</persons>
+  </event>
+  <event>
+    <eventId>27</eventId>
+    <name>Betty Wright</name>
+    <url>http://en.wikipedia.org/wiki/Betty_Wright</url>
+    <image>betty_wright_the_movie.jpg</image>
+    <date>20130428</date>
+    <locationId>1</locationId>
+    <persons>1</persons>
+  </event>
+  <event>
+    <eventId>28</eventId>
+    <name>Lisa Lois</name>
+    <url>http://www.lisalois.com/</url>
+    <image>lisa_lois_breaking_away.jpg</image>
+    <date>20130517</date>
+    <locationId>1</locationId>
+    <persons>4,1</persons>
+  </event>
+  <event>
+    <eventId>29</eventId>
+    <name>Guus Meeuwis</name>
+    <url>http://www.guusmeeuwis.nl/</url>
+    <image>guus_meeuwis_groots_met_een_zachte_g_2013.jpg</image>
+    <date>20130607</date>
+    <locationId>14</locationId>
+    <persons>3,1,2</persons>
+  </event>
+  <event>
+    <eventId>30</eventId>
+    <name>Roots in the Park</name>
+    <url>http://www.rootsinthepark.com/</url>
+    <image>roots_in_the_park_2013.jpg</image>
+    <date>20130706</date>
+    <locationId>15</locationId>
+    <persons>3,4,1</persons>
+  </event>
+  <event>
+    <eventId>31</eventId>
+    <name>Skunk Anansie</name>
+    <url>http://www.skunkanansie.net/</url>
+    <image>skunk_black_traffic.png</image>
+    <date>20130708</date>
+    <locationId>1</locationId>
+    <persons>4,1,2</persons>
+  </event>
+</events>

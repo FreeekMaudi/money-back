@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<events>
+  <event>
+    <eventId>12</eventId>
+  </event>
+  <event>
+    <eventId>16</eventId>
+  </event>
+  <event>
+    <eventId>18</eventId>
+  </event>
+  <event>
+    <eventId>17</eventId>
+  </event>
+  <event>
+    <eventId>19</eventId>
+  </event>
+  <event>
+    <eventId>20</eventId>
+  </event>
+</events>
