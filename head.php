@@ -17,6 +17,13 @@
 			}
 			
 		</script>
-		<link rel="stylesheet" type="text/css" href="style.css"> 
+		<?php
+			$reqURI = explode('/', $_SERVER['REQUEST_URI']);
+			$style = "style.css";
+
+			if (count($reqURI) == 4 && $reqURI[2] == "test")
+				$style = "../".$style;
+		?>
+		<link rel="stylesheet" type="text/css" href=<?php echo '"'.$style.'"'; ?>"> 
 		
 </head>

@@ -4,10 +4,12 @@
 	$rootUrl = 'http://www.maudi.nl/money-back-dev/';
 	$repositoryUrlPart = 'xml/';
 
-	require_once("includes/domain.php"); 
-	require_once("includes/repository.php"); 
-	require_once("includes/functions.php"); 
-	require_once("head.php");
+	$dirUp = "../";
+
+	require_once($dirUp."includes/domain.php"); 
+	require_once($dirUp."includes/repository.php"); 
+	require_once($dirUp."includes/functions.php"); 
+	require_once($dirUp."head.php");
 
 	$allPersons;
 	$allLocations;
@@ -19,7 +21,7 @@
 	$transactionsPerson;
 	
 	if (isset($_POST['testUpload'])) {
-		include("test/uploadProcess.php");
+		include("general/uploadProcess.php");
 		header("Location: {$_SERVER['REQUEST_URI']}");
 	}
 
@@ -36,7 +38,7 @@
 		<a href="#" class="header" onclick="toggle_visibility('upload')">upload</a>
 		&nbsp;*&nbsp;
 	<?php
-		include("test/upload.php");
+		include("general/upload.php");
 	?>
 	<?php
 		include("testfooter.php");

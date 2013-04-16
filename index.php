@@ -4,6 +4,7 @@
 	$rootUrl = 'http://www.maudi.nl/money-back-dev/';
 	$subDir = 'money-back-dev';
 	$repositoryUrlPart = 'xml/';
+	$dirUp = "";
 
 	require_once("includes/domain.php"); 
 	require_once("includes/repository.php"); 
@@ -126,6 +127,9 @@
 
 			echo '<div class="locationList">'."\n";
 			include("ui/locationList.php");
+
+			if ($title == 'money-back-dev')
+				echo "<a href='test'>test</a>\n";
 
 			echo '<div id="formLocation" style="display:none;">'."\n";
 			include("ui/forms/formLocation.php");

@@ -8,10 +8,12 @@
 	$rootUrl = 'http://www.maudi.nl/money-back-dev/';
 	$repositoryUrlPart = 'xml/';
 
-	require_once("includes/domain.php"); 
-	require_once("includes/repository.php"); 
-	require_once("includes/functions.php"); 
-	require_once("head.php");
+	$dirUp = "../";
+
+	require_once($dirUp."includes/domain.php"); 
+	require_once($dirUp."includes/repository.php"); 
+	require_once($dirUp."includes/functions.php"); 
+	require_once($dirUp."head.php");
 
 	$allPersons;
 	$allLocations;
@@ -37,8 +39,8 @@
 		<a href="#" class="header" onclick="toggle_visibility('addLocation')">addLocation</a>
 		&nbsp;*&nbsp;
 	<?php
-		include("test/addEvent.php");
-		include("test/addLocation.php");
+		include("add/addEvent.php");
+		include("add/addLocation.php");
 	?>
 	<?php
 		include("testfooter.php");

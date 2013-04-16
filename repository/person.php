@@ -35,9 +35,9 @@
 
 	function writePersonsToXML()
 	{
-		global $repositoryUrlPart, $allPersons;
+		global $dirUp, $repositoryUrlPart, $allPersons;
 		usort($allPersons, array('Person', '_cmpAscId'));
-		copy($repositoryUrlPart."persons.xml", $repositoryUrlPart."_history/".date("YmdGi")."persons.xml");
+		copy($dirUp.$repositoryUrlPart."persons.xml", $dirUp.$repositoryUrlPart."_history/".date("YmdGi")."persons.xml");
 
 		$doc = new DOMDocument();
 		$doc->formatOutput = true;
@@ -68,7 +68,7 @@
 			$root->appendChild($p);
 		}
 		
-		$file_handle = fopen($repositoryUrlPart.'persons.xml','w'); 
+		$file_handle = fopen($dirUp.$repositoryUrlPart.'persons.xml','w'); 
 		fwrite($file_handle,$doc->saveXML()); 
 		fclose($file_handle);
 	}

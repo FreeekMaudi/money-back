@@ -8,10 +8,12 @@
 	$rootUrl = 'http://www.maudi.nl/money-back-dev/';
 	$repositoryUrlPart = 'xml/';
 
-	require_once("includes/domain.php"); 
-	require_once("includes/repository.php"); 
-	require_once("includes/functions.php"); 
-	require_once("head.php");
+	$dirUp = "../";
+
+	require_once($dirUp."includes/domain.php"); 
+	require_once($dirUp."includes/repository.php"); 
+	require_once($dirUp."includes/functions.php"); 
+	require_once($dirUp."head.php");
 
 	$allPersons;
 	$allLocations;
@@ -35,10 +37,10 @@
 	<br /><br />
 
 	<?php
-		include("test/writePersons.php");
-		include("test/writeLocations.php");
-		include("test/writeEvents.php");
-		// include("test/writeTransactions.php");
+		include("write/writePersons.php");
+		include("write/writeLocations.php");
+		include("write/writeEvents.php");
+		// include("write/writeTransactions.php");
 	?>
 	<?php
 		include("testfooter.php");

@@ -62,9 +62,9 @@
 
 	function writeTransactionsToXML($personToXML)
 	{
-		global $repositoryUrlPart, $transactionsPerson;
+		global $dirUp, $repositoryUrlPart, $transactionsPerson;
 		$personDir = $personToXML->get_name().'/';
-		copy($repositoryUrlPart.$personDir."transactions.xml", $repositoryUrlPart."/_history/".$personDir.date("YmdGi")."transactions.xml");
+		copy($dirUp.$repositoryUrlPart.$personDir."transactions.xml", $dirUp.$repositoryUrlPart."/_history/".$personDir.date("YmdGi")."transactions.xml");
 		
 		$file_handle = fopen($repositoryUrlPart.$personDir.'transactions.xml','w'); 
 
@@ -109,7 +109,7 @@
 			$root->appendChild($t);
 		}
 		
-		$file_handle = fopen($repositoryUrlPart.$personDir.'transactions.xml','w'); 
+		$file_handle = fopen($dirUp.$repositoryUrlPart.$personDir.'transactions.xml','w'); 
 		fwrite($file_handle,$doc->saveXML()); 
 		fclose($file_handle);
 		

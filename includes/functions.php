@@ -1,9 +1,11 @@
 <?php
-	$dir = "functions";
+
+	global $dirUp;
+	$dir = "functions/";
 	
-	include($dir."/array.php");
-	include($dir."/file.php");
-	include($dir."/general.php");
-	include($dir."/logging.php");
+	include($dirUp.$dir."/array.php");
+	include($dirUp.$dir."/file.php");
+	include($dirUp.$dir."/general.php");
+	include($dirUp.$dir."/logging.php");
 	
 ?>

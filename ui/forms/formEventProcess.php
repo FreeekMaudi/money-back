@@ -12,6 +12,9 @@
 
 		$i = count($allEvents) + 1;
 
+		$image = $_FILES['image']['name'];
+		if ($image == "")
+			$image = "event.png";
 		$personIds = "";
 		if (isset($_POST["persons"]))
 		{
@@ -24,7 +27,7 @@
 			$i, 
 			$_POST["artist"], 
 			$_POST["artist_url"], 
-			$_FILES['image']['name'], 
+			$image, 
 			$_POST["date"], 
 			$_POST["location"],
 			$personIds);

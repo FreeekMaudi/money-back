@@ -51,9 +51,9 @@
 
 	function writeLocationsToXML()
 	{
-		global $repositoryUrlPart, $allLocations;
+		global $dirUp, $repositoryUrlPart, $allLocations;
 		usort($allLocations, array('Location', '_cmpAscName'));
-		copy($repositoryUrlPart."locations.xml", $repositoryUrlPart."_history/".date("YmdGi")."locations.xml");
+		copy($dirUp.$repositoryUrlPart."locations.xml", $dirUp.$repositoryUrlPart."_history/".date("YmdGi")."locations.xml");
 
 		$doc = new DOMDocument();
 		$doc->formatOutput = true;
@@ -121,7 +121,7 @@
 			
 		}
 		
-		$file_handle = fopen($repositoryUrlPart.'locations.xml','w'); 
+		$file_handle = fopen($dirUp.$repositoryUrlPart.'locations.xml','w'); 
 		fwrite($file_handle,$doc->saveXML()); 
 		fclose($file_handle);
 	}

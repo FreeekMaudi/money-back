@@ -12,11 +12,15 @@
 		
 		$i = count($allLocations) + 1;
 
+		$image = $_FILES['image']['name'];
+		if ($image == "")
+			$image = "location.png";
+
 		$newOne = new Location(
 			$i, 
 			$_POST["venue"], 
 			$_POST["venue_url"], 
-			$_FILES['image']['name'], 
+			$image, 
 			$_POST["street"], $_POST["number"], $_POST["city"], 
 			$_POST["p_name"], $_POST["p_street"], $_POST["p_number"]);
 		

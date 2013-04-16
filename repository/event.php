@@ -43,9 +43,9 @@
 
 	function writeEventsToXML()
 	{
-		global $repositoryUrlPart, $allEvents;
+		global $dirUp, $repositoryUrlPart, $allEvents;
 		usort($allEvents, array('Event', '_cmpAscDate'));
-		copy($repositoryUrlPart."events.xml", $repositoryUrlPart."_history/".date("YmdGi")."events.xml");
+		copy($dirUp.$repositoryUrlPart."events.xml", $dirUp.$repositoryUrlPart."_history/".date("YmdGi")."events.xml");
 
 		$doc = new DOMDocument();
 		$doc->formatOutput = true;
@@ -88,66 +88,11 @@
 			$root->appendChild($ev);
 		}
 		
-		$file_handle = fopen($repositoryUrlPart.'events.xml','w'); 
+		$file_handle = fopen($dirUp.$repositoryUrlPart.'events.xml','w'); 
 		fwrite($file_handle,$doc->saveXML()); 
 		fclose($file_handle);
 		
 	}
-	
-	// NOT USED
-	// function readEventsForPersonFromXML($eventsForPersonForXML)
-	// {
-	// 	global $rootUrl, $repositoryUrlPart;
-
-	// 	$eventsForPerson;
-	// 	$doc = new DOMDocument();
-	// 	$doc->load($rootUrl.$repositoryUrlPart.$eventsForPersonForXML->get_name().'/events.xml');
-	// 	$xmlEvents = $doc->getElementsByTagName("event");
-
-	// 	$i = 0;
-	// 	foreach($xmlEvents as $xmlEvent)
-	// 	{
-	// 		$ids = $xmlEvent->getElementsByTagName("eventId");
-	// 		$id = $ids->item(0)->nodeValue;
-	// 		$eventsForPerson[$i] = getEventById($id);
-	// 		$i++;
-	// 	}
-
-	// 	usort($eventsForPerson, array('Event', '_cmpDescDate'));
-	// 	return $eventsForPerson;
-	// }
-
-	// NOT USED
-	// function writeEventsForPersonToXML($eventsForPersonToXML)
-	// {
-	// 	global $repositoryUrlPart, $eventsForPerson;
-		
-	// 	usort($eventsForPerson, array('Event', '_cmpDescDate'));
-	// 	$personDir = $eventsForPersonToXML->get_name().'/';
-	// 	copy($repositoryUrlPart.$personDir."events.xml", $repositoryUrlPart."/_history/".$personDir.date("YmdGi")."events.xml");
-
-	// 	$doc = new DOMDocument();
-	// 	$doc->formatOutput = true;
-
-	// 	$root = $doc->createElement("events");
-	// 	$doc->appendChild($root);
-
-	// 	foreach($eventsForPerson as $event)
-	// 	{
-	// 		$ev = $doc->createElement("event");
-
-	// 		$id = $doc->createElement("eventId");
-	// 		$id->appendChild($doc->createTextNode($event->get_id()));
-	// 		$ev->appendChild($id);
-
-	// 		$root->appendChild($ev);
-	// 	}
-		
-	// 	$file_handle = fopen($repositoryUrlPart.$personDir.'events.xml','w'); 
-	// 	fwrite($file_handle,$doc->saveXML()); 
-	// 	fclose($file_handle);
-		
-	// }
 	
 	function getEvents()
 	{
