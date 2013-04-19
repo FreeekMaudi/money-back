@@ -5,6 +5,7 @@
 	$subDir = 'money-back-dev';
 	$repositoryUrlPart = 'xml/';
 	$dirUp = "";
+	$currentDate = date(Ymd);
 
 	require_once("includes/domain.php"); 
 	require_once("includes/repository.php"); 
@@ -15,25 +16,28 @@
 
 	$currentPersonName = '';
 	$opppositePersonName = '';
+	$selectedLocationId = null;
+	$selectedEventId = null;
 	
 	$uri_parameters = array_values($requestURI);
 	
+	$paramIndex = 1;
 	if ($uri_parameters[1] == $subDir)
+		$paramIndex = 2;
+
+	if ($uri_parameters[$paramIndex] != null)
 	{
-		if ($uri_parameters[2] != null)
+		$uri_parameters_exploded = explode('-', $uri_parameters[$paramIndex]);
+		$currentPersonName = $uri_parameters_exploded[0];
+		$secondPart = $uri_parameters_exploded[1];
+		if ($secondPart != null)
 		{
-			$uri_parameters_persons = explode('-', $uri_parameters[2]);
-			$currentPersonName = $uri_parameters_persons[0];
-			$oppositePersonName = $uri_parameters_persons[1] != null ? $uri_parameters_persons[1] : '';
-		}
-	}
-	else
-	{
-		if ($uri_parameters[1] != null)
-		{
-			$uri_parameters_persons = explode('-', $uri_parameters[1]);
-			$currentPersonName = $uri_parameters_persons[0];
-			$oppositePersonName = $uri_parameters_persons[1] != null ? $uri_parameters_persons[1] : '';
+			if (substr($secondPart, 0, 1) == "L")
+				$selectedLocationId = substr($secondPart, 1);
+			elseif (substr($secondPart, 0, 1) == "E")
+				$selectedEventId = substr($secondPart, 1);
+			else
+				$oppositePersonName = $uri_parameters_exploded[1];
 		}
 	}
 
@@ -46,7 +50,7 @@
 	$oppositePerson;
 	$eventsForPerson;
 	$groupForPerson;
-	$locationsPerson;
+	$locationsForPerson;
 	$transactionsPersons;
 	
 	$msgLocation = null;
@@ -87,14 +91,14 @@
 		include("ui/forms/formLocationProcess.php");
 		if ($msgLocation <> "")
 			$msgLocation = "?msgLocation=".$msgLocation;
-		header("Location: {$_SERVER['REQUEST_URI']}{$msgLocation}");
+		header("Location: {$rootUrl}{$currentPersonName}{$msgLocation}");
 	}
 	
 	if (isset($_POST['newEvent']) || isset($_POST['chgEvent'])) {
 		include("ui/forms/formEventProcess.php");
 		if ($msgEvent <> "")
 			$message = "?msgEvent=".$msgEvent;
-		header("Location: {$_SERVER['REQUEST_URI']}{$message}");
+		header("Location: {$rootUrl}{$currentPersonName}{$message}");
 	}
 
 	// if (isset($_POST['newMoney'])) {
@@ -115,6 +119,7 @@
 		getPersons();
 		getLocations();
 		getEvents();
+		setNextEvent();
 		// include("ui/eventList.php");
 		// echo hash('md5', "Maudini")."<br />";
 		// echo hash('md5', "Nien")."<br />";
@@ -123,15 +128,20 @@
 
 		if ($logged_in) {
 			getEventsForPerson($currentPerson);
-			getLocations();
 
+			// Locationlist
 			echo '<div class="locationList">'."\n";
-			include("ui/locationList.php");
+			include("ui/locationListPerson.php");
 
 			if ($title == 'money-back-dev')
 				echo "<a href='test'>test</a>\n";
 
-			echo '<div id="formLocation" style="display:none;">'."\n";
+			// formLocation
+			$styleFormLocation = " style=display:none;";
+			if (isset($selectedLocationId))
+				$styleFormLocation = " style=display:block;";
+
+			echo '<div id="formLocation"'.$styleFormLocation.'>'."\n";
 			include("ui/forms/formLocation.php");
 			echo '</div>'."\n";
 			if ($msgLocation != null)
@@ -139,15 +149,18 @@
 				echo $msgLocation."<br />";
 			}
 
-			echo '<div id="formEvent" style="display:none;">'."\n";
+			// formEvent
+			$styleFormEvent = " style=display:none;";
+			if (isset($selectedEventId))
+				$styleFormEvent = " style=display:block;";
+
+			echo '<div id="formEvent"'.$styleFormEvent.'>'."\n";
 			include("ui/forms/formEvent.php");
 			echo '</div>'."\n";
 			if ($msgEvent != null)
 			{
 				echo $msgEvent."<br />";
 			}
-
-
 
 			if ($oppositePerson != null) {
 			// Transaction Page

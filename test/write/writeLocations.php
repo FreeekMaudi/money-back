@@ -1,4 +1,6 @@
 <div id="writeLocations" style="display:none;">
+	LOCATION
+	<br /><br />
 <?php
 
 	global $allLocations;

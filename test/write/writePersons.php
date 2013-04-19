@@ -1,4 +1,6 @@
 <div id="writePersons" style="display:none;">
+	PERSON
+	<br /><br />
 <?php
 
 	global $allPersons;

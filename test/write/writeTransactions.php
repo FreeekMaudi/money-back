@@ -1,4 +1,6 @@
 <div id="writeTransactions" style="display:none;">
+	TRANSACTION
+	<br /><br />
 <?php
 
 	global $transactionsPerson;

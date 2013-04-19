@@ -1,9 +1,8 @@
-<div id="dltEvent" style="display:block;">
+<div id="updEvent" style="display:block;">
 	EVENT
 	<br /><br />
 <?php
-	$i = count($allEvents) + 1;
-	
+
 	//Non-Existing
 	//$oldOne = new Event($i, "Beth Hart", "http://bethhart.com", "", "20121121", "1", "1,2");
 	//Existing
@@ -12,7 +11,22 @@
 
 	if ($existingOne != null)
 	{
-		$outputSave = $existingOne->delete();
+		if ($existingOne->get_name() == "FAKE")
+			$name = "FAKE-CHANGED";
+		else
+			$name = "FAKE";
+
+		$existingOne = new Event(
+			$existingOne->get_id(),
+			$name,
+			$existingOne->get_url(),
+			$existingOne->get_image(),
+			$existingOne->get_date(),
+			$existingOne->get_location(),
+			$existingOne->get_persons()
+			);
+
+		$outputSave = $existingOne->update();
 		
 		if (gettype($outputSave) == "string")
 		{

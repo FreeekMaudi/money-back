@@ -11,6 +11,7 @@
 	$read = $dir."testread.php";
 	$write = $dir."testwrite.php";
 	$add = $dir."testadd.php";
+	$upd = $dir."testupd.php";
 	$dlt = $dir."testdlt.php";
 	$general = $dir."testgeneral.php";
 ?>
@@ -22,6 +23,8 @@
 		<a href=<?php echo $write; ?>>testwrite</a>
 		&nbsp;*&nbsp;
 		<a href=<?php echo $add; ?>>testadd</a>
+		&nbsp;*&nbsp;
+		<a href=<?php echo $upd; ?>>testupd</a>
 		&nbsp;*&nbsp;
 		<a href=<?php echo $dlt; ?>>testdlt</a>
 		&nbsp;*&nbsp;

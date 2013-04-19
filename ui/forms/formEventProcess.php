@@ -1,20 +1,53 @@
 <?php
 
-	$fileToUpload = $_FILES["image"];
-	if (is_null($fileToUpload))
-		$fileToUpload = $_FILES;
+	global $allEvents, $msgEvent, $rootUrl, $currentPerson, $selectedEventId;
 
-	global $allEvents, $msgEvent, $currentPerson;
-	
-	if (uploadFile($fileToUpload, '/img/events/'))
+	if (is_null($selectedEventId))
 	{
-		readEvents();
+		$fileToUpload = $_FILES["image"];
+		if (is_null($fileToUpload))
+			$fileToUpload = $_FILES;
 
-		$i = count($allEvents) + 1;
+		if (uploadFile($fileToUpload, '/img/events/'))
+		{
+			readEvents();
 
-		$image = $_FILES['image']['name'];
-		if ($image == "")
-			$image = "event.png";
+			$i = count($allEvents) + 1;
+
+			$image = $_FILES['image']['name'];
+			if ($image == "")
+				$image = "event.png";
+			$personIds = "";
+			if (isset($_POST["persons"]))
+			{
+				foreach ($_POST["persons"] as $selectedPerson)
+					$personIds = $personIds.$selectedPerson.",";
+			}
+			$personIds = $personIds.$currentPerson->get_id();
+
+			$newOne = new Event(
+				$i, 
+				$_POST["artist"], 
+				$_POST["artist_url"], 
+				$image, 
+				$_POST["date"], 
+				$_POST["location"],
+				$personIds);
+			
+			$outputSave = $newOne->add();
+			
+			if (gettype($outputSave) == "string")
+			{
+				$msgEvent = $outputSave;
+			}
+		}
+		else
+			$msgEvent = "Uploading image didn't succeed.";
+	}
+	else
+	{
+		$existingEvent = getEventById($selectedEventId);
+
 		$personIds = "";
 		if (isset($_POST["persons"]))
 		{
@@ -23,24 +56,23 @@
 		}
 		$personIds = $personIds.$currentPerson->get_id();
 
-		$newOne = new Event(
-			$i, 
+
+		$chgOne = new Event(
+			$selectedEventId,
 			$_POST["artist"], 
 			$_POST["artist_url"], 
-			$image, 
+			$existingEvent->get_image(), 
 			$_POST["date"], 
-			$_POST["location"],
+			$_POST["location"], 
 			$personIds);
-		
-		$outputSave = $newOne->save();
-		
-		if (gettype($outputSave) == "string")
-		{
-			$msgEvent = $outputSave;
-		}
+
+			$outputSave = $chgOne->update();
+
+			if (gettype($outputSave) == "string")
+			{
+				$msgLocation = $outputSave;
+			}
 	}
-	else
-		$msgEvent = "Uploading image didn't succeed.";
 
 	if ($msgEvent <> "")
 		$msgEvent = "?msgEvent=".$msgEvent;

@@ -1,4 +1,6 @@
 <div id="readEventsForPerson" style="display:none;">
+	EVENT FOR PERSON
+	<br /><br />
 <?php
 	global $allPersons, $eventsForPerson;
 	getPersons();

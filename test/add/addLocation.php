@@ -1,5 +1,6 @@
 <div id="addLocation" style="display:block;">
-	addLocation
+	LOCATION
+	<br />
 <?php
 	$i = count($allLocations) + 1;
 
@@ -8,7 +9,7 @@
 	// Non-Existing
 	$newOne = new Location($i, "Fake", "http://www.maudi.nl", "tivoli.png", "Musicallan", "453", "Utrecht", "Eronder", "Musicallaan", "241");
 
-	$outputSave = $newOne->save();
+	$outputSave = $newOne->add();
 	
 	if (gettype($outputSave) == "string")
 	{

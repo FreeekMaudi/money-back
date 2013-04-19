@@ -23,9 +23,12 @@
 		function get_pAddressStreet() { return $this->pAddressStreet; }
 		private $pAddressNumber;
 		function get_pAddressNumber() { return $this->pAddressNumber; }
+
+		private $knownByPerson;
+		function set_knownByPerson($knownByPerson) { $this->knownByPerson = $knownByPerson;}
+		function get_knownByPerson() { return $this->knownByPerson; }
 		
-		private $events;
-		
+	
 		// constructor
 		function __construct($new_id, $new_name, $new_url, $new_image, 
 								$new_addressStreet, $new_addressNumber, $new_addressCity, 
@@ -41,7 +44,10 @@
 			$this->pAddressName = $new_pAddressName;
 			$this->pAddressStreet = $new_pAddressStreet;
 			$this->pAddressNumber = $new_pAddressNumber;
+			$this->knownByPerson = false;
 		}
+
+		// compares
 		// compareOnName 
 		function _cmpAscName($m, $n)
 		{
@@ -77,49 +83,44 @@
 			return ($m->id > $n->id) ? -1 : 1;
 		}
 		
-
-		/// more methods
-		
-		// getEvents
-		function getEvents()
-		{
-			//foreach ($foundGroups as $event)
-			//{
-			//	$events[$i++] = $event;
-			//}
-			//return $events;
-		}
-		
-		// getGroups
-		function getGroups()
-		{
-			//foreach ($foundGroups as $group)
-			//{
-			//	$groups[$i++] = $group;
-			//}
-			//return $groups;
-		}
-		
-		// save
+		// add
 		// - if new Location doesn't already exist
-		// - create nescessary directories and xml files
 		// - save by writing to xml
-		function save()
+		function add()
 		{
 			if ($this->locationDoesNotExist())
 			{
-				global $allLocations;
-				$allLocations[$this->get_id()] = $this;
-				writeLocationsToXML();
+				$this->save();
 			}
 			else
 			{
-				return "SAVE: Location name does already exist!";
+				return "ADD: Location name does already exist!";
 			}
 			
 			return true;
 		}
 
+		// update
+		// - if the new Location does already exist
+		// - save by writing to xml
+		function update()
+		{
+			if (!($this->locationDoesNotExist()))
+			{
+				$this->save();
+			}
+			else
+			{
+				return "UPD: Location name does not exist!";
+			}
+			
+			return true;
+		}
+
+		// delete
+		// - find index Location to delete
+		// - delete Location
+		// - save by writing to xml
 		function delete()
 		{
 			global $allLocations;
@@ -141,6 +142,19 @@
 		
 		/// private methods
 		
+		// save the location
+		private function save()
+		{
+			global $allLocations;
+
+			$index = getKeyById($allLocations, $this->get_id());
+
+			$allLocations[$index] = $this;
+			writeLocationsToXML();
+
+			return true;
+		}
+
 		// Check if the name of the new Locaton already exists
 		private function locationDoesNotExist()
 		{

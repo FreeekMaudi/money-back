@@ -33,7 +33,7 @@
 		getEvents();
 
 	?>
-		<br /><br />
+		<h1>Delete</h1>
 		<a href="#" class="header" onclick="toggle_visibility('dltEvent')">dltEvent</a>
 		&nbsp;*&nbsp;
 		<a href="#" class="header" onclick="toggle_visibility('dltLocation')">dltLocation</a>

@@ -111,6 +111,30 @@
 		
 	}
 
+	function setNextEvent()
+	{
+		global $allEvents, $currentDate;
+
+		$currentNextEvent = null;
+
+		foreach ($allEvents as $event) {
+			if($event->get_date() >= $currentDate)
+			{
+				$currentNextEvent = $event;
+			}
+			else
+				break;
+		}
+
+		if (!(is_null($currentNextEvent)))
+		{
+			$index = getKeyById($allEvents, $currentNextEvent->get_id());
+			$allEvents[$index]->set_isNext(true);
+		}
+
+
+	}
+
 	function saveEvents()
 	{
 		writeEventsToXML();

@@ -1,4 +1,6 @@
 <div id="readTransactions" style="display:none;">
+	TRANSACTION
+	<br /><br />
 <?php
 	global $transactionsPerson;
 	$person1 = getPersonByName("Maudi");

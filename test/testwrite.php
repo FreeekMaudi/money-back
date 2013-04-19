@@ -26,7 +26,7 @@
 ?>
 
 <body>
-	<br /><br />
+	<h1>Write</h1>
 	<a href="#" class="header" onclick="toggle_visibility('writePersons')">writePersons</a>
 	&nbsp;*&nbsp;
 	<a href="#" class="header" onclick="toggle_visibility('writeLocations')">writeLocations</a>

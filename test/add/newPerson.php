@@ -1,4 +1,6 @@
 <div id="newPerson" style="display:none;">
+	PERSON
+	<br />
 <?php
 	$i = count($allPersons) + 1;
 

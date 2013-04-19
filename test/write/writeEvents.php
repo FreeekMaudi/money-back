@@ -1,4 +1,6 @@
 <div id="writeEvents" style="display:none;">
+	EVENT
+	<br /><br />
 <?php
 
 	global $allEvents;

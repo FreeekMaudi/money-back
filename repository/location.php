@@ -150,13 +150,31 @@
 
 	function getLocationsForPerson()
 	{
-		global $eventsForPerson, $locationsPerson;
+		global $eventsForPerson, $locationsForPerson;
 		
 		foreach ($eventsForPerson as $eventPerson)
 		{
-			if (!isset($locationsPerson[$eventPerson->getLocationId()]))
+			$index = getKeyById($locationsForPerson, $eventPerson->getLocationId());
+			if (!isset($locationsForPerson[$eventPerson->getLocationId()]))
 			{
-				$locationsPerson[$eventPerson->getLocationId()] = $eventPerson->get_location();
+				$locationsForPerson[$index] = $eventPerson->get_location();
+				$locationsForPerson[$index]->set_knownByPerson(true);
+			}
+		}
+	}
+
+	function setLocationsForPerson()
+	{
+		global $eventsForPerson, $allLocations, $locationsForPerson, $currentPerson;
+
+		$locationsForPerson = $allLocations;
+		
+		foreach ($eventsForPerson as $eventPerson)
+		{
+			$index = getKeyById($allLocations, $eventPerson->getLocationId());
+			if (isset($locationsForPerson[$index]))
+			{
+				$locationsForPerson[$index]->set_knownByPerson(true);
 			}
 		}
 	}

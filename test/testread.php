@@ -7,6 +7,7 @@
 	
 	$rootUrl = 'http://www.maudi.nl/money-back-dev/';
 	$repositoryUrlPart = 'xml/';
+	$currentDate = date(Ymd);
 
 	$dirUp = "../";
 
@@ -26,21 +27,24 @@
 ?>
 
 <body>
-	<br /><br />
-	<a href="#" class="header" onclick="toggle_visibility('readPersons')">readPersons</a>
+	<h1>Read</h1>
+	<a href="#" class="header" onclick="toggle_visibility('readPersons')">Persons</a>
 	&nbsp;*&nbsp;
-	<a href="#" class="header" onclick="toggle_visibility('readLocations')">readLocations</a>
+	<a href="#" class="header" onclick="toggle_visibility('readLocations')">Locations</a>
 	&nbsp;*&nbsp;
-	<a href="#" class="header" onclick="toggle_visibility('readEvents')">readEvents</a>
+	<a href="#" class="header" onclick="toggle_visibility('readLocationsForPerson')">LocationsForPerson</a>
 	&nbsp;*&nbsp;
-	<a href="#" class="header" onclick="toggle_visibility('readEventsForPerson')">readEventsForPerson</a>
+	<a href="#" class="header" onclick="toggle_visibility('readEvents')">Events</a>
 	&nbsp;*&nbsp;
-	<a href="#" class="header" onclick="toggle_visibility('readTransactions')">readTransactions</a>
+	<a href="#" class="header" onclick="toggle_visibility('readEventsForPerson')">EventsForPerson</a>
+	&nbsp;*&nbsp;
+	<a href="#" class="header" onclick="toggle_visibility('readTransactions')">Transactions</a>
 	<br /><br />
 
 	<?php
 		include("read/readPersons.php");
 		include("read/readLocations.php");
+		include("read/readLocationsForPerson.php");
 		include("read/readEvents.php");
 		include("read/readEventsForPerson.php");
 		include("read/readTransactions.php");

@@ -1,7 +1,10 @@
 <div id="readEvents" style="display:none;">
+	EVENT
+	<br /><br />
 <?php
 	global $allEvents;
 	getEvents();
+	setNextEvent();
 
 	foreach ($allEvents as $event)
 	{
@@ -18,6 +21,8 @@
 		echo "Location: ".$event->getLocationName();
 		echo " - ";
 		echo "Persons: ".$event->getPersonsNames()."(".$event->getPersonsIdsString().")";
+		echo " - ";
+		echo "isNext: ".$event->get_isNext();
 		echo "<br /><br />";
 	}
 ?>

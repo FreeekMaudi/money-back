@@ -33,14 +33,14 @@
 		getEvents();
 
 	?>
-		<h1>Add</h1>
-		<a href="#" class="header" onclick="toggle_visibility('addLocation')">addLocation</a>
+		<h1>Update</h1>
+		<a href="#" class="header" onclick="toggle_visibility('updEvent')">updEvent</a>
 		&nbsp;*&nbsp;
-		<a href="#" class="header" onclick="toggle_visibility('addEvent')">addEvent</a>
+		<a href="#" class="header" onclick="toggle_visibility('updLocation')">updLocation</a>
 		&nbsp;*&nbsp;
 	<?php
-		include("add/addLocation.php");
-		include("add/addEvent.php");
+		include("upd/updEvent.php");
+		include("upd/updLocation.php");
 	?>
 	<?php
 		include("testfooter.php");

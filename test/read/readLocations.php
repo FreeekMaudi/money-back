@@ -1,4 +1,6 @@
 <div id="readLocations" style="display:none;">
+	LOCATION
+	<br /><br />
 <?php
 	global $allLocations;
 	getLocations();

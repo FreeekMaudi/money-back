@@ -34,7 +34,7 @@
 		getEvents();
 
 	?>
-		<br /><br />
+		<h1>General</h1>
 		<a href="#" class="header" onclick="toggle_visibility('upload')">upload</a>
 		&nbsp;*&nbsp;
 	<?php

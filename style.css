@@ -5,7 +5,19 @@ body {
 table {
 	border-collapse: collapse;
 }
-
+table.event {
+	width: 500px;	
+}
+tr.event {
+	height: 80px;
+}
+tr.nextEvent {
+	background-image: url(img/nextEvent.png);
+    position: absolute;
+    left: 240px;
+	width: 500px;	
+    z-index: -1;
+}
 a, a:visited {
 	text-decoration: none;
 	color: #3e0470;
@@ -14,6 +26,16 @@ a, a:visited {
 a:hover {
 	text-decoration: none;
 	color: #be008a;
+}
+
+a.known, a:visited.known {
+	text-decoration: none;
+	color: #be008a;
+}
+
+a:hover.known {
+	text-decoration: none;
+	color: #3e0470;
 }
 
 .container {

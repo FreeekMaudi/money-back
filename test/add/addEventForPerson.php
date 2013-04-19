@@ -1,4 +1,6 @@
 <div id="addEventForPerson" style="display:block;">
+	EVENT FOR PERSON
+	<br />
 <?php
 
 	$person = getPersonById("1");

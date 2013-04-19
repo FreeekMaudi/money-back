@@ -1,4 +1,6 @@
 <div id="newTransaction" style="display:none;">
+	TRANSACTION
+	<br />
 <?php
 	global $currentPerson;
 	$currentPerson = getPersonById("1");

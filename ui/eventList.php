@@ -1,7 +1,7 @@
 <?php
 	// Events
 	global $allEvents;
-	
+
 	echo '<div class="eventList">'."\n";
 	echo "\t".'<table><tr><td width="350px">'."\n";
 	echo "\t".'<span class="header">Events</span>'."\n";
